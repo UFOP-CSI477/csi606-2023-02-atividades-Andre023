@@ -6,7 +6,7 @@
 - Nome: André Lucas Santos
 - Matrícula: 20.2.8106
 - Curso: Sistemas de Informação
-- Semestre/Ano correntes: 6º período
+- Semestre/Ano correntes: 2023/2
 - Link para o seu GitHub: https://github.com/Andre023
 
 ## [Projeto final:](./Projeto/README.md)
