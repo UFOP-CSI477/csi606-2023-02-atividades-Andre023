@@ -1,0 +1,234 @@
+GET http://localhost:5000/estados
+
+###
+
+POST http://localhost:5000/estados
+Content-Type: application/json
+
+{
+
+    "nome": "roraima",
+    "sigla": "ro"
+
+}
+
+###
+
+PUT http://localhost:5000/estados
+Content-Type: application/json
+
+{
+    "id": 4,
+    "nome": "Roraima",
+    "sigla": "RO"
+
+}
+
+###
+
+DELETE http://localhost:5000/estados
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+###
+
+// CIDADES
+
+GET http://localhost:5000/cidades
+
+###
+
+POST http://localhost:5000/cidades
+Content-Type: application/json
+
+{
+    "nome": "Rio Brajnco",
+    "estadoId": 2
+}
+
+###
+
+PUT http://localhost:5000/cidades
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Boa Vista",
+    "estadoId": 2
+}
+
+###
+
+DELETE http://localhost:5000/cidades
+Content-Type: application/json
+
+{
+    "id": 4
+}
+
+// TIPOS SANGUINEOS
+
+###
+
+GET http://localhost:5000/tipo
+
+###
+
+POST http://localhost:5000/tipo
+Content-Type: application/json
+
+{
+    "tipo": "A",
+    "fator": "positivo"
+}
+
+###
+
+PUT http://localhost:5000/tipo
+Content-Type: application/json
+
+{
+    "id": 1,
+    "tipo": "AB",
+    "fator": "Positivo"
+}
+
+###
+
+DELETE http://localhost:5000/tipo
+Content-Type: application/json
+
+{
+    "id": 2
+}
+
+// PESSOAS
+
+###
+
+GET http://localhost:5000/pessoas
+
+###
+
+POST http://localhost:5000/pessoas
+Content-Type: application/json
+
+{
+    "nome": "João",
+    "rua": "Rua 1",
+    "numero": "123",
+    "complemento": "Casa",
+    "rg": "123456789",
+    "cidade_id": 2,
+    "tipo_id": 1
+}
+
+###
+
+PUT http://localhost:5000/pessoas
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "João",
+    "rua": "Rua 2",
+    "numero": "1222",
+    "complemento": "Casa",
+    "rg": "123456789",
+    "cidade_id": 2,
+    "tipo_id": 1
+}
+
+###
+
+DELETE http://localhost:5000/pessoas
+Content-Type: application/json
+
+{
+    "id": 1
+}
+
+// LOCAIS
+
+###
+
+GET http://localhost:5000/local
+
+###
+
+POST http://localhost:5000/local
+Content-Type: application/json
+
+{
+    "nome": "Hospital 1",
+    "rua": "Rua 1",
+    "numero": "123",
+    "complemento": "Casa",
+    "cidade_id": 2
+}
+
+###
+
+PUT http://localhost:5000/local
+Content-Type: application/json
+
+{
+    "id": 1,
+    "nome": "Hospital Piraraquara",
+    "rua": "Rua 2",
+    "numero": "123",
+    "complemento": "Casa",
+    "cidade_id": 2
+}
+
+###
+
+DELETE http://localhost:5000/local
+Content-Type: application/json
+
+{
+    "id": 2
+}
+
+//  DOACOES
+
+###
+
+GET http://localhost:5000/doacoes
+
+###
+
+POST http://localhost:5000/doacoes
+Content-Type: application/json
+
+{
+    "pessoa_id": 2,
+    "local_id": 1,
+    "tipo_id": 1,
+    "data": "2020-10-10"
+}
+
+###
+
+PUT http://localhost:5000/doacoes
+Content-Type: application/json
+
+{
+    "id": 2,
+    "pessoa_id": 2,
+    "local_id": 3,
+    "tipo_id": 1,
+    "data": "2020-10-10"
+}
+
+###
+
+DELETE http://localhost:5000/doacoes
+Content-Type: application/json
+
+{
+    "id": 2
+}

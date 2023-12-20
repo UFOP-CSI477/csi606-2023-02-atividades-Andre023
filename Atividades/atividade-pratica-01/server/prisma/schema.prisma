@@ -1,0 +1,103 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Estado {
+  id         Int      @id @default(autoincrement())
+  nome       String
+  sigla      String   @unique
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  cidade Cidade[]
+
+  @@map("estados")
+}
+
+model Cidade {
+  id   Int    @id @default(autoincrement())
+  nome String
+
+  estado_id Int
+
+  estado Estado @relation(fields: [estado_id], references: [id])
+
+  created_at DateTime @default(now())
+  updated_at DateTime @updatedAt
+
+  locais_coleta Locais_coleta[]
+  pessoas Pessoas[]
+
+  @@map("cidades")
+}
+
+model Tipos_sanguineos {
+  id          Int    @id @default(autoincrement())
+  tipo        String
+  fator       String
+
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  pessoas Pessoas[]
+
+  @@map("tipos_sanguineos")
+}
+
+model Locais_coleta {
+  id          Int    @id @default(autoincrement())
+  nome        String
+  rua         String
+  numero      String
+  complemento String
+
+  cidade_id   Int
+
+  cidade      Cidade @relation(fields: [cidade_id], references: [id])
+
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  doacoes Doacoes[]
+
+  @@map("locais_coleta")
+}
+
+model Doacoes {
+  id          Int    @id @default(autoincrement())
+  pessoa_id   Int
+  local_id    Int
+  data        DateTime
+
+  local Locais_coleta @relation(fields: [local_id], references: [id])
+
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("doacoes")
+}
+
+model Pessoas {
+  id          Int     @id @default(autoincrement())
+  nome        String
+  rua         String
+  numero      String
+  complemento String
+  rg          String  @unique
+  cidade_id   Int
+  tipo_id     Int
+
+  cidade      Cidade @relation(fields: [cidade_id], references: [id])
+  tipo        Tipos_sanguineos @relation(fields: [tipo_id], references: [id])
+
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+
+  @@map("pessoas")
+}
+
