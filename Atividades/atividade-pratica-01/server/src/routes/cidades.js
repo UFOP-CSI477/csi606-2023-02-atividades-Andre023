@@ -6,8 +6,8 @@ import { UpdateCidade } from "../controller/cidades/UpdateCidade.js";
 import { DeleteCidade } from "../controller/cidades/DeleteCidade.js";
 
 const cidadeRouter = Router();
-
-// GET ALL
+ 
+// GET ALL   
 const getAllCidade = new GetAllCidade();
 cidadeRouter.get('/cidades', getAllCidade.handle);
 
