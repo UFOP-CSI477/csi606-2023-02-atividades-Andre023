@@ -1,20 +1,20 @@
-GET http://localhost:5000/estados
+GET http://localhost:4500/estados
 
 ###
 
-POST http://localhost:5000/estados
+POST http://localhost:4500/estados
 Content-Type: application/json
 
 {
 
-    "nome": "roraima",
+    "nome": "roraimfefsda",
     "sigla": "ro"
 
 }
 
 ###
 
-PUT http://localhost:5000/estados
+PUT http://localhost:4500/estados
 Content-Type: application/json
 
 {
@@ -26,7 +26,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/estados
+DELETE http://localhost:4500/estados
 Content-Type: application/json
 
 {
@@ -37,11 +37,11 @@ Content-Type: application/json
 
 // CIDADES
 
-GET http://localhost:5000/cidades
+GET http://localhost:4500/cidades
 
 ###
 
-POST http://localhost:5000/cidades
+POST http://localhost:4500/cidades
 Content-Type: application/json
 
 {
@@ -51,7 +51,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:5000/cidades
+PUT http://localhost:4500/cidades
 Content-Type: application/json
 
 {
@@ -62,7 +62,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/cidades
+DELETE http://localhost:4500/cidades
 Content-Type: application/json
 
 {
@@ -73,11 +73,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/tipo
+GET http://localhost:4500/tipo
 
 ###
 
-POST http://localhost:5000/tipo
+POST http://localhost:4500/tipo
 Content-Type: application/json
 
 {
@@ -87,7 +87,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:5000/tipo
+PUT http://localhost:4500/tipo
 Content-Type: application/json
 
 {
@@ -98,7 +98,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/tipo
+DELETE http://localhost:4500/tipo
 Content-Type: application/json
 
 {
@@ -109,11 +109,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/pessoas
+GET http://localhost:4500/pessoas
 
 ###
 
-POST http://localhost:5000/pessoas
+POST http://localhost:4500/pessoas
 Content-Type: application/json
 
 {
@@ -128,7 +128,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:5000/pessoas
+PUT http://localhost:4500/pessoas
 Content-Type: application/json
 
 {
@@ -144,7 +144,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/pessoas
+DELETE http://localhost:4500/pessoas
 Content-Type: application/json
 
 {
@@ -155,11 +155,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/local
+GET http://localhost:4500/local
 
 ###
 
-POST http://localhost:5000/local
+POST http://localhost:4500/local
 Content-Type: application/json
 
 {
@@ -172,7 +172,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:5000/local
+PUT http://localhost:4500/local
 Content-Type: application/json
 
 {
@@ -186,7 +186,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/local
+DELETE http://localhost:4500/local
 Content-Type: application/json
 
 {
@@ -197,11 +197,11 @@ Content-Type: application/json
 
 ###
 
-GET http://localhost:5000/doacoes
+GET http://localhost:4500/doacoes
 
 ###
 
-POST http://localhost:5000/doacoes
+POST http://localhost:4500/doacoes
 Content-Type: application/json
 
 {
@@ -213,7 +213,7 @@ Content-Type: application/json
 
 ###
 
-PUT http://localhost:5000/doacoes
+PUT http://localhost:4500/doacoes
 Content-Type: application/json
 
 {
@@ -226,7 +226,7 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:5000/doacoes
+DELETE http://localhost:4500/doacoes
 Content-Type: application/json
 
 {

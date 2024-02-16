@@ -1,15 +1,22 @@
-import { prisma } from "../../database/client.js";
+import { prisma } from '../../database/client.js';
 
 export class CreateDoacoes {
     async handle(request, response) {
-        const { pessoa_id, local_id, data } = request.body;
-        const isoDate = new Date(data).toISOString();
+        const { pessoaId, localId, datas } = request.body;
+        const date = new Date(datas);
+
+        if (isNaN(date.getTime())) {
+            return response.status(400).json({ message: 'Invalid date.' });
+        }
+
+        const isoDate = date.toISOString();
+
         try {
             const doacao = await prisma.doacoes.create({
                 data: {
-                    pessoa_id,
-                    local_id,
-                    data: isoDate
+                    pessoa_id: pessoaId,
+                    local_id: localId,
+                    data: isoDate // Alterado de 'datas' para 'data'
                 }
             });
             return response.json(doacao);

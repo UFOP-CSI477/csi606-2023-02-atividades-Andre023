@@ -9,23 +9,23 @@ const tipoRouter = Router();
 
 // GET ALL
 const getAllTipo = new GetAllTipo();
-tipoRouter.get('/tipo', getAllTipo.handle);
+tipoRouter.get('/tipos', getAllTipo.handle);
 
 // GET BY ID
 const getByIdTipo = new GetByIdTipo();
-tipoRouter.get('/tipo:id', getByIdTipo.handle);
+tipoRouter.get('/tipos/:id', getByIdTipo.handle);
 
 // CREATE   
 const createTipo = new CreateTipo();
-tipoRouter.post('/tipo', createTipo.handle);
+tipoRouter.post('/tipos', createTipo.handle);
 
 // UPDATE
 const updateTipo = new UpdateTipo();
-tipoRouter.put('/tipo', updateTipo.handle);
+tipoRouter.put('/tipos', updateTipo.handle);
 
 // DELETE
 const deleteTipo = new DeleteTipo();
-tipoRouter.delete('/tipo', deleteTipo.handle);
+tipoRouter.delete('/tipos', deleteTipo.handle);
 
 // EXPORT - ROUTER
 export { tipoRouter }

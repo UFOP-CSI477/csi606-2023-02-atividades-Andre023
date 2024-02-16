@@ -2,8 +2,8 @@ import { prisma } from "../../database/client.js";
 
 export class UpdatePessoas {
     async handle(request, response) {
-        const {id, nome, rua, numero, complemento, rg, cidade_id, tipo_id } = request.body;
-        if (!nome || !rua || !numero || !complemento || !rg || !cidade_id || !tipo_id) {
+        const {id, nome, rua, numero, complemento, rg, cidadeId, tipoId } = request.body;
+        if (!nome || !rua || !numero || !complemento || !rg || !cidadeId || !tipoId) {
             return response.status(400).json({
                 message: 'Invalid data. All fields are required.'
             });
@@ -17,8 +17,8 @@ export class UpdatePessoas {
                     numero, 
                     complemento, 
                     rg,
-                    cidade: { connect: { id: cidade_id } },
-                    tipo: { connect: { id: tipo_id } }
+                    cidade: { connect: { id: cidadeId } },
+                    tipo: { connect: { id: tipoId } }
                 }
             });
 

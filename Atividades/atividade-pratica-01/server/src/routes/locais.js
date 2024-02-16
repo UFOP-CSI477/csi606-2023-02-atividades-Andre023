@@ -9,23 +9,23 @@ const localRouter = Router();
 
 // GET ALL
 const getAllLocalController = new GetAllLocal();
-localRouter.get('/local', getAllLocalController.handle);
+localRouter.get('/locais', getAllLocalController.handle);
 
 // GET BY ID
 const getByIdLocalController = new GetByIdLocal();
-localRouter.get('/local/:id', getByIdLocalController.handle);
+localRouter.get('/locais/:id', getByIdLocalController.handle);
 
 // CREATE   
 const createLocaisController = new CreateLocal();
-localRouter.post('/local', createLocaisController.handle);
+localRouter.post('/locais', createLocaisController.handle);
 
 // UPDATE
 const updateLocalController = new UpdateLocal();
-localRouter.put('/local', updateLocalController.handle);
+localRouter.put('/locais', updateLocalController.handle);
 
 // DELETE
 const deleteLocalController = new DeleteLocal();
-localRouter.delete('/local', deleteLocalController.handle);
+localRouter.delete('/locais', deleteLocalController.handle);
 
 // EXPORT - ROUTER
 export { localRouter };

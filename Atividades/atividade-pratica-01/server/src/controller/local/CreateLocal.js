@@ -2,7 +2,7 @@ import { prisma } from "../../database/client.js";
 
 export class CreateLocal {
     async handle(request, response) {
-        const { nome, rua, numero, complemento, cidade_id } = request.body;
+        const { nome, rua, numero, complemento, cidadeId } = request.body;
 
         try {
             const local = await prisma.locais_coleta.create({
@@ -11,7 +11,8 @@ export class CreateLocal {
                     rua,
                     numero,
                     complemento,
-                    cidade: { connect: { id: cidade_id } }
+                    cidade: { connect: { id: cidadeId } }
+                    
                 }
             });
             return response.json(local);
