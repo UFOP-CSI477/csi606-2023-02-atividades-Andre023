@@ -71,4 +71,4 @@ Para executar o frontend, em uma nova janela do terminal, use:
 npm run dev
 ```
 
-O sistema de gerenciamento de partidas de tênis estará acessível através do navegador no endereço http://localhost:3000.
+O sistema de gerenciamento de partidas de tênis estará acessível através do navegador no endereço http://localhost:5173/.
