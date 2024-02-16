@@ -11,4 +11,4 @@
 
 ## [Projeto final:](./Projeto/README.md)
 
-Apresente uma breve descrição do seu projeto.
+Este projeto é um sistema de gerenciamento de partidas de tênis. Ele permite o cadastro de clientes, quadras, e o registro de partidas, fornecendo uma interface completa de CRUD (Create, Read, Update, Delete) para todas as tabelas envolvidas.
